@@ -12,7 +12,7 @@ test('get started link', async ({ page }) => {
 
   // Click the get started link.
   await expect (page.getByRole('link', { name: 'Get started' })).toBeVisible();
-
+await expect (page.getByRole('link', { name: 'Get started' })).toHaveAttribute('href', '/docs/intro');
   await page.getByRole('link', { name: 'Get started' }).click();
 
   // Expects page to have a heading with the name of Installation.
